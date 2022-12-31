@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  cassandra-db:
+    container_name: cassandra
+    image: bitnami/cassandra:4.0
+    restart: always
+    volumes:
+      - /cassandra:/var/lib/cassandra
+      - ./schema.cql:/docker-entrypoint-initdb.d/schema.cql
+    ports:
+      - "9042:9042"
+    expose:
+      - "9042"
+    network_mode: dataloader
+
+    

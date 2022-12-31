@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  load:
+    image: "load"
+    container_name: load
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/data
+    network_mode: dataloader
