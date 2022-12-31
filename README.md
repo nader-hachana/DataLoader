@@ -1,7 +1,7 @@
 # 1. Environment installations
 
-## 1-1. Download sbt 1.6.2
-Download sbt 1.6.2 on your machine then run the following command inside the project path folder to build the application jar file
+## 1-1. Download sbt 1.2.8
+Download sbt 1.2.8 on your machine then run the following command inside the project path folder to build the application jar file
 >sbt clean assembly 
 
 ## 1-2. Pull Cassandra latest version from dockerhub 
