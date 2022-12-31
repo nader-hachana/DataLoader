@@ -4,7 +4,7 @@
 Download sbt 1.2.8 on your machine then run the following command inside the project path folder to build the application jar file
 >sbt clean assembly 
 
-## 1-2. Pull Cassandra latest version from dockerhub 
+## 1-2. Pull Cassandra image (version 4.0) from dockerhub 
 I used bitnami/cassandra:4.0 because When the container is executed for the first time, it will execute the files with extensions .sh, .cql or .cql.gz located at /docker-entrypoint-initdb.d in sort'ed order by filename
 >docker pull bitnami/cassandra:4.0
 
@@ -14,7 +14,7 @@ I used bitnami/cassandra:4.0 because When the container is executed for the firs
 ## 1-4. Create the docker network to perform containers communication: default driver "bridge"
 >docker network create dataloader
 
-# 2. Running the project *without Airflow* 
+# 2. Running the project *locally* 
 
 ## 2-1. Create Cassandra container and run it: 
 It will initialize the database with the keyspaces and the tables mentioned within /docker-entrypoint-initdb.d/schema.cql
@@ -26,7 +26,7 @@ It will initialize the database with the keyspaces and the tables mentioned with
 >
 >docker-compose -f load.yml run load
 
-# 3. Running the project *with Airflow*
+# 3. Running the project *on Airflow*
 
 ## 3-1. Download Airflow
 This requires Python version 3.9.x to be compatible with the constraints mentioned below
