@@ -22,6 +22,7 @@ It will initialize the database with the keyspaces and the tables mentioned with
 
 ## 2-2.Load the data inside the cassandra database
 >docker-compose -f load.yml build load
+If you faced an error whilst loading metadata, just run "rm  ~/.docker/config.json"
 >docker-compose -f load.yml run load
 
 # 3. Running the project *with Airflow*
