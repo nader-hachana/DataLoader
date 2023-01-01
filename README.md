@@ -39,6 +39,7 @@ This requires Python version 3.9.x to be compatible with the constraints mention
 >airflow standalone
 
 ## 3-4. Move python file to airflow/dags path for each modification made on the file
+*Warn*: before moving the data_loader python file to the dags folder you need to change the content of { cwd = '/.../' } within the code to **your project directory**
 >sudo cp data_loader.py ~/airflow/dags
 
 ## 3-5. Run the dag on the airflow UI or through CLI
