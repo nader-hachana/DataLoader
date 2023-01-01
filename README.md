@@ -7,15 +7,15 @@ Download sbt 1.2.8 on your machine then run the following command inside the pro
 - ## Download Docker Desktop
 
   - ## Pull Cassandra image (version 4.0) from dockerhub 
-I used bitnami/cassandra:4.0 because When the container is executed for the first time, it will execute the files with extensions .sh, .cql or .cql.gz located at /docker-entrypoint-initdb.d in sort'ed order by filename. This way it becomes easier to initialize the database when it's created.
->docker pull bitnami/cassandra:4.0
+  I used bitnami/cassandra:4.0 because When the container is executed for the first time, it will execute the files with extensions .sh, .cql or .cql.gz located at /docker-entrypoint-initdb.d in sort'ed order by filename. This way it becomes easier to initialize the database when it's created.
+  >docker pull bitnami/cassandra:4.0
 
   - ## Pull Apache Spark image (version 3.2.1-hadoop-2.7) from dockerhub
->docker pull apache/spark:v3.2.1
+  >docker pull apache/spark:v3.2.1
 
   - ## Create the docker network to perform containers communication
-The default driver is "bridge".
->docker network create dataloader
+  The default driver is "bridge".
+  >docker network create dataloader
 
 # 2. Running the project *locally* 
 
