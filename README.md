@@ -21,8 +21,8 @@ It will initialize the database with the keyspaces and the tables mentioned with
 >docker-compose -f db.yml run -d
 
 ## 2-2.Load the data inside the cassandra database
+*Warn*: If you faced an error whilst loading metadata, just run "rm  ~/.docker/config.json"
 >docker-compose -f load.yml build load  
-*Warn*: If you faced an error whilst loading metadata, just run "rm  ~/.docker/config.json"  
 >docker-compose -f load.yml run load
 
 # 3. Running the project *on Airflow*
@@ -49,8 +49,7 @@ The "-v or --verbose" has been introduced to airflow on the version 2.5.0
 >airflow dags show data_loader
 
 ## 3-7. Save the Dag graph as an image on the local directory
->sudo apt-get install graphviz
->
+>sudo apt-get install graphviz  
 >airflow dags show data_loader --save data_loader.png
 
 
