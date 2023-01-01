@@ -4,6 +4,8 @@
 Download sbt 1.2.8 on your machine then run the following command inside the project path folder to build the application jar file
 >sbt clean assembly 
 
+- ## Download Docker Desktop
+
 - ## Pull Cassandra image (version 4.0) from dockerhub 
 I used bitnami/cassandra:4.0 because When the container is executed for the first time, it will execute the files with extensions .sh, .cql or .cql.gz located at /docker-entrypoint-initdb.d in sort'ed order by filename. This way it becomes easier to initialize the database when it's created.
 >docker pull bitnami/cassandra:4.0
