@@ -1,6 +1,6 @@
 # 1. Environment installations
 
-## - Download sbt 1.2.8
+- ## Download sbt 1.2.8
 Download sbt 1.2.8 on your machine then run the following command inside the project path folder to build the application jar file
 >sbt clean assembly 
 
