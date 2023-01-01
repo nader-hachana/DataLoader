@@ -8,7 +8,7 @@ Download sbt 1.2.8 on your machine then run the following command inside the pro
 I used bitnami/cassandra:4.0 because When the container is executed for the first time, it will execute the files with extensions .sh, .cql or .cql.gz located at /docker-entrypoint-initdb.d in sort'ed order by filename. This way it becomes easier to initialize the database when it's created.
 >docker pull bitnami/cassandra:4.0
 
-- ## Pull Apache Spark image (version 3.2.1) from dockerhub
+- ## Pull Apache Spark image (version 3.2.1-hadoop-2.7) from dockerhub
 >docker pull apache/spark:v3.2.1
 
 - ## Create the docker network to perform containers communication
